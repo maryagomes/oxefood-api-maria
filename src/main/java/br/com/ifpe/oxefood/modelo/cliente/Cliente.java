@@ -40,4 +40,7 @@ public class Cliente extends EntidadeAuditavel  {
    @Column
    private String foneFixo;
 
+public void setHabilitado(Boolean true1) {
+}
+
 }

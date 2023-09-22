@@ -1,7 +1,5 @@
 package br.com.ifpe.oxefood.api.cliente;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,14 +16,14 @@ import br.com.ifpe.oxefood.modelo.cliente.ClienteService;
 @RequestMapping("/api/cliente")
 @CrossOrigin
 public class ClienteController {
-    @Autowired
+
+   @Autowired
    private ClienteService clienteService;
 
    @PostMapping
-   public ResponseEntity<Cliente> save(@RequestBody @Valid ClienteRequest request) {
+   public ResponseEntity<Cliente> save(@RequestBody ClienteRequest request) {
 
        Cliente cliente = clienteService.save(request.build());
        return new ResponseEntity<Cliente>(cliente, HttpStatus.CREATED);
    }
-
 }

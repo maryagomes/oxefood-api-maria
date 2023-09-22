@@ -21,4 +21,5 @@ public class ClienteService {
        cliente.setDataCriacao(LocalDate.now());
        return repository.save(cliente);
    }
+
 }

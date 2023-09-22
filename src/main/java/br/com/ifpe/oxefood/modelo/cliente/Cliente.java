@@ -3,6 +3,10 @@ package br.com.ifpe.oxefood.modelo.cliente;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Where;
 
 import br.com.ifpe.oxefood.util.entity.EntidadeAuditavel;
 import lombok.AllArgsConstructor;
@@ -11,6 +15,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Entity
+@Table(name = "Cliente")
+@Where(clause = "habilitado = true")
 @Builder
 @Getter
 @Setter
@@ -33,7 +40,5 @@ public class Cliente extends EntidadeAuditavel  {
 @Column
    private String foneFixo;
 
-public void setHabilitado(Boolean true1) {
-}
 
 }

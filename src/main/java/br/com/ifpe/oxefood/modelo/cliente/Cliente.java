@@ -24,20 +24,20 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cliente extends EntidadeAuditavel  {
-    
-@Column
+
+   @Column
    private String nome;
 
-@Column
+   @Column
    private LocalDate dataNascimento;
 
-@Column
+   @Column
    private String cpf;
 
-@Column
+   @Column
    private String foneCelular;
-   
-@Column
+
+   @Column
    private String foneFixo;
 
 
